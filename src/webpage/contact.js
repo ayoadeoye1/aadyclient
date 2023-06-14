@@ -8,7 +8,7 @@ import wa from '../assets/wa.png'
 
 const Contact = () => {
   return (
-    <div className=' bg-gradient-to-tr from-slate-800 via-slate-300 to-slate-600 text-yellow-50 w-full h-screen items-center'>
+    <div className=' bg-gradient-to-tr leading-10 from-slate-800 via-slate-300 to-slate-600 text-yellow-50 w-full h-screen items-center'>
         <div className='flex flex-row w-full  '>
             <img className='h-60 w-3/5 rounded-full' src='' alt='me' />
             <div className='m-4 w-2/5 flex flex-col '>

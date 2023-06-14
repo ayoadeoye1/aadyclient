@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-const baseUrl = 'https://aadyportfolioapi.cyclic.app/api/'
+const baseUrl = 'https://aadyportfolioapi.cyclic.app/api'
 const Projects = () => {
 
   const [data, setData] = useState([]);

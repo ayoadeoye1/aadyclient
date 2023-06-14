@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const baseUrl = 'https://aadyportfolioapi.cyclic.app/api/'
+const baseUrl = 'https://aadyportfolioapi.cyclic.app/api'
 
 
 const Msg = () => {

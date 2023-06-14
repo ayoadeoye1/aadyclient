@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 
-const baseUrl = 'https://aadyportfolioapi.cyclic.app/api/'
+const baseUrl = 'https://aadyportfolioapi.cyclic.app/api'
 
 const Edu = () => {
     const token = JSON.parse(localStorage.getItem('token'));

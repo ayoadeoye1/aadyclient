@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const baseUrl = 'https://aadyportfolioapi.cyclic.app/api/'
+const baseUrl = 'https://aadyportfolioapi.cyclic.app/api'
 
 const Message = () => {
 

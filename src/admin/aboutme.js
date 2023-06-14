@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 
 const Aboutme = () => {
 
-  const baseUrl = 'https://aadyportfolioapi.cyclic.app/api/'
+  const baseUrl = 'https://aadyportfolioapi.cyclic.app/api'
 
     const [text, setText] = useState('');
     const [video, setVideo] = useState('');

@@ -16,7 +16,7 @@ import Message from './message';
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 
-const baseUrl = 'https://aadyportfolioapi.cyclic.app/api/'
+const baseUrl = 'https://aadyportfolioapi.cyclic.app/api'
 const MainPage = () => {
 
   const [ip, setIp] = useState();

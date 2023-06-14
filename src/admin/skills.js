@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const baseUrl = 'https://aadyportfolioapi.cyclic.app/api/'
+const baseUrl = 'https://aadyportfolioapi.cyclic.app/api'
 const Skills = () => {
     const token = JSON.parse(localStorage.getItem('token'));
 
