@@ -33,9 +33,3 @@ const About = () => {
 }
 
 export default About
-
-// Hello, I am Ayobami Isaac Adeoye, experienced javascript developer, i have been doing javascript programming since the past 4 years, 
-//         i have worked with various javascript libraries, frameworks and runtime, but my major focus is on backend (rest API) 
-//         development with nodejs, and minor reactjs frontend development. i'll make a well secured MERN stack application for your 
-//         you/bussiness, same origin or cross origin at affordable rate, 
-//         come-on, let's take your bussiness to the next level. Hit the Contact Button Above!.

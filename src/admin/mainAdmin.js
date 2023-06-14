@@ -35,8 +35,7 @@ const MainAdmin = () => {
     }
   };
 
-  toast.error(error)
-
+  
   return (
     <div className="flex items-center justify-center h-screen">
       <ToastContainer />
