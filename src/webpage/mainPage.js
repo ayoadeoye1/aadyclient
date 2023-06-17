@@ -16,7 +16,8 @@ import Message from './message';
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 
-const baseUrl = 'https://aadyportfolioapi.cyclic.app/api'
+import baseUrl from '../components/baseurl'
+
 const MainPage = () => {
 
   const [ip, setIp] = useState();
@@ -99,7 +100,7 @@ const MainPage = () => {
           <div className=' m-4 hidden text-blue-500 md:flex md:flex-row sm:flex sm:flex-row '>
             <button className='pl-2' onClick={() => scrollDown(aboutref)} >AboutMe</button>
             <button className='pl-2' onClick={() => scrollDown(skillsref)} >Skills</button>
-            <button className='pl-2' onClick={() => scrollDown(blogref)} >Blog</button><br />
+            <button className='pl-2' onClick={() => scrollDown(blogref)} >Blogs</button><br />
             <button className='pl-2' onClick={() => scrollDown(projectref)} >Projects</button>
             <button className='pl-2' onClick={() => scrollDown(eduref)} >Education</button>
             <button className='pl-2' onClick={() => scrollDown(msgref)} >Message</button>
@@ -117,7 +118,7 @@ const MainPage = () => {
               <div className='m-4 flex flex-col text-center text-2xl font-sans text-white '>
                 <button className='pl-2' onClick={() =>{ Don(); scrollDown(aboutref)}} >AboutMe</button><br />
                 <button className='pl-2' onClick={() =>{ Don(); scrollDown(skillsref)}} >Skills</button><br />
-                <button className='pl-2' onClick={() =>{ Don(); scrollDown(blogref)}} >Blog</button><br />
+                <button className='pl-2' onClick={() =>{ Don(); scrollDown(blogref)}} >Blogs</button><br />
                 <button className='pl-2' onClick={() =>{ Don(); scrollDown(projectref)}} >Projects</button><br />
                 <button className='pl-2' onClick={() =>{ Don(); scrollDown(eduref)}} >Education</button><br />
                 <button className='pl-2' onClick={() =>{ Don(); scrollDown(msgref)}} >Message</button><br />

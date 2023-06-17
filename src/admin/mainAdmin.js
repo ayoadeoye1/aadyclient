@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import { useNavigate } from 'react-router-dom';
 
-const baseUrl = 'https://aadyportfolioapi.cyclic.app/api'
+import baseUrl from '../components/baseurl'
 const MainAdmin = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');

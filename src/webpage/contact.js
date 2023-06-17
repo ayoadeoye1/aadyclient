@@ -5,12 +5,13 @@ import { faCopyright, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-ic
 import fb from '../assets/fb.png'
 import twi from '../assets/twi.png'
 import wa from '../assets/wa.png'
+import aady from '../assets/aady1.jpg'
 
 const Contact = () => {
   return (
     <div className=' bg-gradient-to-tr leading-10 from-slate-800 via-slate-300 to-slate-600 text-yellow-50 w-full h-screen items-center'>
-        <div className='flex flex-row w-full  '>
-            <img className='h-60 w-3/5 rounded-full' src='' alt='me' />
+        <div className='flex flex-row w-full justify-between  '>
+            <img className=' mt-8 h-60 w-60 rounded-full' src={aady} alt='me' />
             <div className='m-4 w-2/5 flex flex-col '>
                 <h2>contacts</h2>
                 <a className='m-4 flex flex-row' href='tel:+2348063399734'>

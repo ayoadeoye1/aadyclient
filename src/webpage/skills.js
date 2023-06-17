@@ -2,7 +2,8 @@ import React,{ useState, useEffect} from 'react'
 import Rating from '../components/rating'
 import axios from 'axios'
 
-const baseUrl = 'https://aadyportfolioapi.cyclic.app/api'
+import baseUrl from '../components/baseurl'
+
 const Skills = () => {
 
     const [data, setData] = useState([]);

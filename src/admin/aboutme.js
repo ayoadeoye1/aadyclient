@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const Aboutme = () => {
+import baseUrl from '../components/baseurl'
 
-  const baseUrl = 'https://aadyportfolioapi.cyclic.app/api'
+const Aboutme = () => {
 
     const [text, setText] = useState('');
     const [video, setVideo] = useState('');
