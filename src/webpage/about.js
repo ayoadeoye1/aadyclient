@@ -14,7 +14,7 @@ const About = () => {
       setData(res.data);
     })
     .catch((err) => {
-        console.log(err);
+        console.log(err); 
     });
   }, [])
 
@@ -25,7 +25,7 @@ const About = () => {
         <div className='leading-8 sm:leading-10 p-6 font-lead'>{data && data.about}</div>
         <center className=' w-full'>
           <h2>About Video</h2>
-          <YouTube videoId={data.vidUrl?.split('/')[3]} opts={{ height: '250px', width: '300px'}}  />
+          <YouTube videoId={data.vidUrl?.split('/')[4]} opts={{ height: '250px', width: '300px'}}  /> 
         </center>
       </div>
     </div>

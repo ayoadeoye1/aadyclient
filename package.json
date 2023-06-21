@@ -1,6 +1,5 @@
 {
   "name": "pwa-client",
-  "proxy": "https://aadyportfolioapi.cyclic.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
