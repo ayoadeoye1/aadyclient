@@ -23,44 +23,38 @@ const Projects = () => {
             <h1 className="m-2 text-lg text-center uppercase font-semibold">
                 Projects
             </h1>
-            <div className="flex flex-wrap justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-center">
                 {data?.map((x) => (
                     <div
                         key={x._id}
-                        className="bg-slate-200 m-4 p-4 w-full sm:w-[300px] rounded-lg shadow-md"
+                        className="relative bg-slate-200 m-4 p-4 w-full rounded-lg shadow-md"
                     >
                         <iframe
-                            className="h-[200px] w-full p-2 rounded-lg"
+                            className="h-48 sm:h-64 w-full p-2 rounded-lg"
                             src={x.url ? x.url : x.repo}
                             title="project frame"
                         />
                         <div className="mt-4">
                             <p>
-                                <strong>COMMENT:</strong> {x.comment}
+                                <strong>ABOUT:</strong> {x.comment}
                             </p>
                             <p>
-                                <strong>STACK:</strong> {x.stack}
+                                <strong>WHAT I DID:</strong> {x.stack}
                             </p>
+                            <br />
                             <a
-                                className="text-blue-600 block mt-2"
-                                href={x.url ? x.url : "#"}
+                                className="text-blue-600 block absolute bottom-2 right-2"
+                                href={x.url ? x.url : x.repo}
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                Visit website
-                            </a>
-                            <a
-                                className="text-blue-600 block"
-                                href={x.repo}
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Visit GitHub repo
+                                VIEW
                             </a>
                         </div>
                     </div>
                 ))}
             </div>
+
             <div className="text-center mt-4">
                 <Link className="font-medium text-blue-600" to="/projects">
                     View all projects...

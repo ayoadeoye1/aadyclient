@@ -1,49 +1,99 @@
-import React from 'react'
-import { Link, Outlet, useNavigate } from 'react-router-dom'
+import React from "react";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 
 const AdminDashboard = () => {
-    const width = window.innerWidth;
-
     const navigate = useNavigate();
+    const location = useLocation();
 
-    const logoutUser = () =>{
+    const logoutUser = () => {
         localStorage.clear();
-        navigate('/admin-signin');
-    }
+        navigate("/admin-signin");
+    };
 
-  return (
-    <div>
-        {
-            (width<700)?
-            <div className=' bg-slate-50 text-gray-700 text-center'>
-                <p className=' font-bold font-about text-xl mt-[50%]'>you are not allowed to access this page with mobile phone</p>
-            </div>
-
-            :
-
-            <div className=''>
-                <header className=' bg-slate-300 shadow-lg w-full pt-0'>
-                    <>
-                        <h1>Admin Dashboard</h1>
-                        <button onClick={() => logoutUser()} className='m-2 float-right'>LogOut</button>
-                    </><br />
-                    <div>
-                        <Link className=' text-blue-400 m-2' to='/admin-dashboard/home'>home</Link>
-                        <Link className=' text-blue-400 m-2' to='/admin-dashboard/aboutme'>aboutme</Link>
-                        <Link className=' text-blue-400 m-2' to='/admin-dashboard/skill'>skill</Link>
-                        <Link className=' text-blue-400 m-2' to='/admin-dashboard/project'>project</Link>
-                        <Link className=' text-blue-400 m-2' to='/admin-dashboard/blog'>blog</Link>
-                        <Link className=' text-blue-400 m-2' to='/admin-dashboard/edu'>education</Link>
-                        <Link className=' text-blue-400 m-2' to='/admin-dashboard/msg'>msg-frm-users</Link>
+    return (
+        <div>
+            <div className="bg-gray-100 min-h-screen">
+                <header className="bg-slate-300 shadow-lg text-white">
+                    <div className="container mx-auto py-4 px-8 flex items-center justify-between">
+                        <h1 className="text-2xl font-bold">Admin Dashboard</h1>
+                        <button
+                            onClick={logoutUser}
+                            className="text-blue-400 hover:underline"
+                        >
+                            Log Out
+                        </button>
                     </div>
-                </header><br />
-            <div className='pt-0'>
-                <Outlet />
+                    <nav className="bg-slate-400 py-4 px-8">
+                        <div className="container mx-auto flex items-center justify-between">
+                            <ul className="flex">
+                                <NavItem
+                                    to="/admin-dashboard/home"
+                                    location={location}
+                                >
+                                    Home
+                                </NavItem>
+                                <NavItem
+                                    to="/admin-dashboard/aboutme"
+                                    location={location}
+                                >
+                                    About Me
+                                </NavItem>
+                                <NavItem
+                                    to="/admin-dashboard/skill"
+                                    location={location}
+                                >
+                                    Skills
+                                </NavItem>
+                                <NavItem
+                                    to="/admin-dashboard/project"
+                                    location={location}
+                                >
+                                    Projects
+                                </NavItem>
+                                <NavItem
+                                    to="/admin-dashboard/blog"
+                                    location={location}
+                                >
+                                    Blogs
+                                </NavItem>
+                                <NavItem
+                                    to="/admin-dashboard/edu"
+                                    location={location}
+                                >
+                                    Education
+                                </NavItem>
+                                <NavItem
+                                    to="/admin-dashboard/msg"
+                                    location={location}
+                                >
+                                    Messages
+                                </NavItem>
+                            </ul>
+                        </div>
+                    </nav>
+                </header>
+                <div className="container mx-auto pt-8">
+                    <Outlet />
+                </div>
             </div>
-            </div>
-        }
-    </div>
-  )
-}
+        </div>
+    );
+};
 
-export default AdminDashboard
+const NavItem = ({ to, children, location }) => {
+    const isActive = location.pathname === to;
+    return (
+        <li className="mr-4">
+            <Link
+                to={to}
+                className={`text-white ${
+                    isActive ? "underline" : "hover:underline"
+                }`}
+            >
+                {children}
+            </Link>
+        </li>
+    );
+};
+
+export default AdminDashboard;
