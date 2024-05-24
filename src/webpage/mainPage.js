@@ -91,7 +91,7 @@ const MainPage = () => {
             {top && (
                 <button
                     onClick={() => goTop()}
-                    className=" bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 h-10 w-10 fixed right-[25px] bottom-[40px] font-bold text-5xl rounded-full"
+                    className="bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 h-10 w-10 fixed right-6 bottom-10 font-bold text-5xl rounded-full z-50"
                 >
                     ^
                 </button>
