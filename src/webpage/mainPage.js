@@ -329,7 +329,7 @@ const MainPage = () => {
                 <div className=" mt-20">
                     <center>
                         <img
-                            className=" rounded-full h-[200px] w-[200px] sm:h-[250px] sm:w-[250px] md:h-[300px] md:w-[300px]"
+                            className=" rounded-3xl h-[200px] w-[200px] sm:h-[250px] sm:w-[250px] md:h-[300px] md:w-[300px] object-cover"
                             src={ay}
                             alt="not available"
                         />
